@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "GameOverScene.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -89,6 +90,9 @@ NSMutableArray *_projectiles;
     CCSprite *sprite = (CCSprite *)sender;
     if (sprite.tag == 1) { // target
         [_targets removeObject:sprite];
+        GameOverScene *gameOverScene = [GameOverScene node];
+        [gameOverScene.layer.label setString:@"You Lose :["];
+        [[CCDirector sharedDirector] replaceScene:gameOverScene];
     } else if (sprite.tag == 2) { // projectile
         [_projectiles removeObject:sprite];
     }
@@ -170,6 +174,12 @@ NSMutableArray *_projectiles;
         for (CCSprite *target in targetsToDelete) {
             [_targets removeObject:target];
             [self removeChild:target cleanup:YES]; 
+            _projectilesDestroyed++;
+            if (_projectilesDestroyed > 30) {
+                GameOverScene *gameOverScene = [GameOverScene node];
+                [gameOverScene.layer.label setString:@"You Win!"];
+                [[CCDirector sharedDirector] replaceScene:gameOverScene];
+            }
         }
         
         if (targetsToDelete.count > 0) {
@@ -182,6 +192,7 @@ NSMutableArray *_projectiles;
         [_projectiles removeObject:projectile];
         [self removeChild:projectile cleanup:YES];
     }
+    
     [projectilesToDelete release];
 }
 

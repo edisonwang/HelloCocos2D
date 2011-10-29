@@ -126,6 +126,7 @@
 		B70EECA3145C70B700AF98C4 /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = B70EECA0145C70B700AF98C4 /* Player.png */; };
 		B70EECA4145C70B700AF98C4 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = B70EECA1145C70B700AF98C4 /* Projectile.png */; };
 		B70EECA5145C70B700AF98C4 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = B70EECA2145C70B700AF98C4 /* Target.png */; };
+		B770852D145C7992000D8296 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B770852C145C7992000D8296 /* GameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -369,6 +370,8 @@
 		B70EECA0145C70B700AF98C4 /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Player.png; path = Resources/Player.png; sourceTree = "<group>"; };
 		B70EECA1145C70B700AF98C4 /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Projectile.png; path = Resources/Projectile.png; sourceTree = "<group>"; };
 		B70EECA2145C70B700AF98C4 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Target.png; path = Resources/Target.png; sourceTree = "<group>"; };
+		B770852B145C7992000D8296 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		B770852C145C7992000D8296 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +428,8 @@
 		B70EEB3C145C703F00AF98C4 /* HelloCocos2D */ = {
 			isa = PBXGroup;
 			children = (
+				B770852B145C7992000D8296 /* GameOverScene.h */,
+				B770852C145C7992000D8296 /* GameOverScene.m */,
 				B70EEC91145C704100AF98C4 /* AppDelegate.h */,
 				B70EEC92145C704100AF98C4 /* AppDelegate.m */,
 				B70EEC94145C704100AF98C4 /* RootViewController.h */,
@@ -943,6 +948,7 @@
 				B70EEC93145C704100AF98C4 /* AppDelegate.m in Sources */,
 				B70EEC96145C704100AF98C4 /* RootViewController.m in Sources */,
 				B70EEC99145C704100AF98C4 /* HelloWorldLayer.m in Sources */,
+				B770852D145C7992000D8296 /* GameOverScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +1001,7 @@
 				GCC_PREFIX_HEADER = HelloCocos2D/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = HelloCocos2D/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1010,6 +1017,7 @@
 				GCC_PREFIX_HEADER = HelloCocos2D/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = HelloCocos2D/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -1036,6 +1044,7 @@
 				B70EEC9F145C704100AF98C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
