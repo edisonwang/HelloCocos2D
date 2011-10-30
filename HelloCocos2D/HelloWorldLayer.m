@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "GameOverScene.h"
+#import "SimpleAudioEngine.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -45,7 +46,7 @@ NSMutableArray *_projectiles;
         player.position = ccp(player.contentSize.width/2, winSize.height/2);
         [self addChild:player]; 
     }
-    
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"background-music-aac.caf"];
     [self schedule:@selector(gameLogic:) interval:1.0];
     [self schedule:@selector(update:)];
     self.isTouchEnabled = YES;
@@ -92,6 +93,7 @@ NSMutableArray *_projectiles;
         [_targets removeObject:sprite];
         GameOverScene *gameOverScene = [GameOverScene node];
         [gameOverScene.layer.label setString:@"You Lose :["];
+        _projectilesDestroyed = 0;
         [[CCDirector sharedDirector] replaceScene:gameOverScene];
     } else if (sprite.tag == 2) { // projectile
         [_projectiles removeObject:sprite];
@@ -146,6 +148,7 @@ NSMutableArray *_projectiles;
                            nil]];
     projectile.tag = 2;
     [_projectiles addObject:projectile];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"pew-pew-lei.caf"];
 }
 
 - (void)update:(ccTime)dt {
@@ -178,6 +181,7 @@ NSMutableArray *_projectiles;
             if (_projectilesDestroyed > 30) {
                 GameOverScene *gameOverScene = [GameOverScene node];
                 [gameOverScene.layer.label setString:@"You Win!"];
+                _projectilesDestroyed = 0;
                 [[CCDirector sharedDirector] replaceScene:gameOverScene];
             }
         }

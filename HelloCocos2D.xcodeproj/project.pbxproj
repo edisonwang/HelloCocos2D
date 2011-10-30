@@ -127,6 +127,8 @@
 		B70EECA4145C70B700AF98C4 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = B70EECA1145C70B700AF98C4 /* Projectile.png */; };
 		B70EECA5145C70B700AF98C4 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = B70EECA2145C70B700AF98C4 /* Target.png */; };
 		B770852D145C7992000D8296 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B770852C145C7992000D8296 /* GameOverScene.m */; };
+		B7758A53145CF9660082EF88 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = B7758A51145CF9660082EF88 /* background-music-aac.caf */; };
+		B7758A54145CF9660082EF88 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = B7758A52145CF9660082EF88 /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -372,6 +374,8 @@
 		B70EECA2145C70B700AF98C4 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Target.png; path = Resources/Target.png; sourceTree = "<group>"; };
 		B770852B145C7992000D8296 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		B770852C145C7992000D8296 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		B7758A51145CF9660082EF88 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music-aac.caf"; path = "Resources/background-music-aac.caf"; sourceTree = "<group>"; };
+		B7758A52145CF9660082EF88 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "Resources/pew-pew-lei.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +451,8 @@
 		B70EEB3D145C703F00AF98C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7758A51145CF9660082EF88 /* background-music-aac.caf */,
+				B7758A52145CF9660082EF88 /* pew-pew-lei.caf */,
 				B70EECA0145C70B700AF98C4 /* Player.png */,
 				B70EECA1145C70B700AF98C4 /* Projectile.png */,
 				B70EECA2145C70B700AF98C4 /* Target.png */,
@@ -839,6 +845,8 @@
 				B70EECA3145C70B700AF98C4 /* Player.png in Resources */,
 				B70EECA4145C70B700AF98C4 /* Projectile.png in Resources */,
 				B70EECA5145C70B700AF98C4 /* Target.png in Resources */,
+				B7758A53145CF9660082EF88 /* background-music-aac.caf in Resources */,
+				B7758A54145CF9660082EF88 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
